@@ -1,0 +1,17 @@
+<!-- create_event.html -->
+
+<form method="POST" action="/create_event_data">
+    <label for="title">Event Title:</label>
+    <input type="text" id="title" name="title" required>
+    <br><br>
+    <label for="bid" >Birthday Name:</label>
+    <input id="bid" name="bid" type="text"  hidden="hidden" value='{{ bid }}' />
+        <input id="bname" name="bname" type="text"  readonly="readonly" value='{{ name }}' />
+    <br><br>
+
+
+    <input type="submit" value="Create Event">
+    </form>
+
+    <h2><a href="/delete-past-events">Delete Older Events</a></h2>
+

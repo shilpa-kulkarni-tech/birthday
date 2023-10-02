@@ -1,0 +1,27 @@
+<!-- birthday_detail.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Details</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>{{ birthday.name }}</h1>
+    <p>Date of Birth: {{ birthday.date_of_birth }}</p>
+
+    <h2>Associated Events:</h2>
+    <ul>
+        {% for event in events %}
+            <li>{{ event.title }} - {{ event.date }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Actions</h2>
+    <a href="{{ url_for('birthdays.create_event', birthday_id=birthday.id) }}">Create Event</a>
+    <a href="{{ url_for('birthdays.edit_birthday', birthday_id=birthday.id) }}">Edit Birthday</a>
+    <a href="{{ url_for('birthdays.delete_birthday', birthday_id=birthday.id) }}">Delete Birthday</a>
+</body>
+</html>

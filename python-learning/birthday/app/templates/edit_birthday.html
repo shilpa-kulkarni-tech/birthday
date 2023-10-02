@@ -1,0 +1,12 @@
+<!-- edit_birthday.html -->
+
+<h1>Edit Birthday</h1>
+<form method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="{{ birthday.name }}" required>
+    <br><br>
+    <label for="date_of_birth">Date of Birth:</label>
+    <input type="date" id="date_of_birth" name="date_of_birth" value="{{ birthday.date_of_birth }}" required>
+    <br><br>
+    <input type="submit" value="Save Changes">
+</form>

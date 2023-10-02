@@ -1,0 +1,33 @@
+<!-- create_birthday.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Reminder</title>
+</head>
+<body>
+    <h1>Add Birthday</h1>
+    <form method="POST"  action="/create_birthday">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <br><br>
+        <label for="date_of_birth">Date of Birth:</label>
+        <input type="date" id="date_of_birth" name="date_of_birth" required>
+        <br><br>
+        <input type="submit" value="Add Birthday">
+    </form>
+
+    <h2>All Birthdays</h2>
+    <ul>
+
+        {% for birthday in birthdays %}
+            <li><a href="{{ url_for('events.create_event', bid=birthday.id , name = birthday.name ) }}" class="name-link">{{ birthday.name}}</a></li>
+        {% endfor %}
+    </ul>
+
+
+</body>
+</html>

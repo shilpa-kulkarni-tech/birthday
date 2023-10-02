@@ -1,0 +1,8 @@
+<!-- birthdays_by_month.html -->
+
+<h1>Birthdays for Month</h1>
+<ul>
+    {% for birthday in birthdays %}
+        <li>{{ birthday.name }} - {{ birthday.date_of_birth }}</li>
+    {% endfor %}
+</ul>
