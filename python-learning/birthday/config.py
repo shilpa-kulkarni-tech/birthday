@@ -18,7 +18,7 @@ MAIL_PORT = 587  # SMTP server port (587 for TLS)
 MAIL_USE_TLS = True  # Use TLS for secure connection
 MAIL_USE_SSL = False  # Use SSL (set to False when using TLS)
 MAIL_USERNAME = 'Shilpa'  # SMTP server username
-MAIL_PASSWORD = 'Sumeet@18'  # SMTP server password
+MAIL_PASSWORD = '****'  # SMTP server password
 MAIL_DEFAULT_SENDER = 'kulkarnishilpa735@gmail.com'  # Default sender email address
 
 # Admins (for access control)
